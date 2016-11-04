@@ -1,0 +1,22 @@
+<ion-view view-title="Contacts">
+
+    <ion-content>
+        <ion-list ng-show="contacts">
+            <ion-item   ng-repeat="contact in contacts" type="item-text-wrap" ng-if="contact.$id !== profileId" ng-click="openChatRoom(contact.$id)">
+                <div class="item-icon-left">
+               <i class="icon ion-person"></i>
+                   <h2>{{contact.displayName}}</h2>
+                    <p>{{contact.email}}</p>
+              </div>
+               <div class="item-icon-right">
+                <i class="icon ion-ios-arrow-right"></i>
+              </div>
+            </ion-item>
+        </ion-list>
+        <ion-list ng-hide="contacts.length">
+            <ion-item class="textCenter">
+                <i class="icon ion-loading-c"></i> Loading Contacts
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,28 @@
+<ion-view view-title="Employee Details" hide-back-button="false">
+    <ion-nav-buttons side="left">
+       <button class="button button-clear" ng-click="myGoBack()" style="color:#e3ebcd" >
+    <i class="icon ion-ios-arrow-back white-icon-tab"></i>
+    Back</button>
+    </ion-nav-buttons>
+  <ion-content has-header="true" padding="true">
+      <div class="details">
+          <img src="img/{{employee.Gender==='Male'? 'male-avatar.png':'female-avatar.png'}}" width="100" height="100"/>
+          <h4>{{ employee.FullName }}</h4>
+          
+          <p>{{ employee.Department }}<br/>
+          {{ employee.JobTitle }}</p>
+      </div>
+
+      <div class="list card">
+          <a class="item item-icon-left" href="#/employee/{{employee.ManagerID}}" ng-if="employee.ManagerID !=''"><i class="icon ion-person"></i>View Manager<p>{{employee.ManagerName}}</p></a>
+          <a class="item item-icon-left" href="#/employee/{{employee.PersonID}}/reports" ng-if="employee.Reports > 0"><i class="icon ion-person-stalker"></i>View Direct Reports<p>{{employee.Reports}}</p></a>
+          <a class="item item-icon-left" ng-href="tel:{{employee.OfficeExt}}"><i class="icon ion-android-call"></i>Call Office<p>{{employee.OfficeExt}}</p></a>
+          <a class="item item-icon-left" ng-href="tel:{{employee.MobileNo}}"><i class="icon ion-android-call"></i>Call Cell<p>{{employee.MobileNo}}</p></a>
+          <a class="item item-icon-left" ng-href="sms:{{employee.MobileNo}}"><i class="icon ion-chatbox-working"></i>SMS<p>{{employee.MobileNo}}</p></a>
+          <a class="item item-icon-left" ng-click="openChat(employee.EmployeeID)"><i class="icon ion-chatboxes"></i>Chat<p>Drop a chat</p></a>
+          <a class="item item-icon-left" ng-href="mailto:{{employee.Email}}"><i class="icon ion-ios-email"></i>Email<p>{{employee.Email}}</p></a>
+         <a class="button icon-left ion-chevron-left button-clear button-dark" ui-sref="tab.employee">Back Home</a>
+      </div>
+      
+  </ion-content>
+</ion-view>

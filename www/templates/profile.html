@@ -1,0 +1,40 @@
+<ion-view view-title="Profile" cache-view="false" hide-nav-bar="true">
+     
+     <!--<ion-nav-bar class="bar-balanced">
+    <ion-nav-back-button></ion-nav-back-button>
+  </ion-nav-bar>-->
+    <ion-content>
+
+            <ion-item  type="item-text-wrap" >
+              <div class="item-icon-left">
+               <i class="icon ion-person"></i>
+                     <h2>{{profile.FullName}}</h2>
+                   <h4>{{profile.Department}}</h4>
+                 
+              </div>
+               <div class="item-icon-right">
+                <i class="icon ion-edit small-icon" ng-click="addMedia()"></i>
+              </div><br />
+            </ion-item>
+         <ion-item>
+               <div class="item-icon-left">
+                <i class="icon ion-gear-a" ></i>
+                    <p style="white-space:normal">{{profile.JobTitle}}</p>
+                </div>
+           </ion-item>
+           <ion-item>
+               <div class="item-icon-left">
+                <i class="icon ion-ios-email" ></i>
+                    <p> {{profile.Email}}</p>
+                </div>
+           </ion-item>
+         <ion-item>
+              <ion-item white-space: nowrap;">
+                 <img  ng-src="{{urlForImage()}}" class="img-round" style="padding: 5px 5px 5px 5px" />
+             </ion-item>
+               <div>
+                 <button ng-click="logout()"  class="button button-block button-positive">Log Out </button>
+                </div>
+             </ion-item>
+    </ion-content>
+</ion-view>

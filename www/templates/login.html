@@ -1,0 +1,24 @@
+<ion-view view-title="LOGIN" hide-nav-bar="true">
+  <ion-content>
+<div class="row-login">
+    <div class="logo">
+    <img src="img/Logo.png" />
+     </div>
+</div>
+<div class="row-input">
+<div class="list">
+  <label class="item-login item-input">
+     <i class="icon ion-person placeholder-icon white-icon"></i>
+    <input type="text" placeholder="Username" ng-model="user.email">
+  </label>
+  <label class="item-login item-input">
+      <i class="icon ion-locked placeholder-icon white-icon"></i>
+    <input type="password" placeholder="Password" ng-model="user.pwdForLogin">
+  </label>
+</div>
+</div>
+<button class="button button-block button-positive"  ng-click="signInCustom(user)">
+  SIGN IN 
+</button>
+  </ion-content>
+</ion-view>

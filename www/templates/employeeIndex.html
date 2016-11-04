@@ -1,0 +1,47 @@
+<ion-view view-title="Employee Search" hide-nav-bar="true">
+     
+      <div id="search-bar"> 
+    <ion-header-bar  class="bar bar-header item-input-inset">
+        <div class="item-input-wrapper textbox-search">
+            <i class="icon ion-ios-search placeholder-icon"></i>
+            <input id="searchKey" type="search" ng-change="search()" placeholder="Search" ng-model="searchKey" autocorrect="off" style="color:#0e0c0c !important; font-size:18px" >
+            <button class="button button-clear " ng-click="clearSearch()">X</button>
+        </div>
+           
+    </ion-header-bar>
+       </div>
+      <ion-content id="content" >
+       <ion-list ng-show="employees">
+           <ion-item   ng-repeat="employee in employees" type="item-text-wrap" ng-click="openEmployee(employee.EmployeeID,0)" >
+                <div class="item-icon-left">
+               <i class="icon ion-person"></i>
+                    <h2>{{employee.FullName}}</h2>
+                    <h5>{{employee.Department}}</h5>
+                 <p>{{employee.JobTitle}}</p>
+              </div>
+               <div class="item-icon-right">
+                <i class="icon ion-ios-arrow-right"></i>
+              </div>
+            </ion-item>
+           
+        </ion-list>
+        
+        <ion-list ng-hide="employees.length>0">
+            <ion-item>
+                <i class="icon ion-loading-c"></i>Recently Searched Employees..
+                </ion-item>
+            <ion-item   ng-repeat="employee in recentEmployees | orderBy:'DateAdded':true"" ng-if="employee.EmployeeID !== profileId" type="item-text-wrap" ng-click="openEmployee(employee.EmployeeID,1)" >
+                <div class="item-icon-left">
+               <i class="icon ion-person"></i>
+                    <h2>{{employee.FullName}}</h2>
+                    <h5>{{employee.Department}}</h5>
+                 <p class="unwrap-text">{{employee.JobTitle}}</p>
+              </div>
+               <div class="item-icon-right">
+                <i class="icon ion-ios-arrow-right"></i>
+              </div>
+            </ion-item>
+           
+        </ion-list>
+   </ion-content>
+</ion-view>

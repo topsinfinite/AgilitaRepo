@@ -1,0 +1,177 @@
+.logo {
+    display: block;
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+}
+.logoText {
+    text-align: center;
+    font-size: 28px;
+    font-family: fantasy;
+}
+.item-note {
+    font-size: 10px;
+    margin-top: -22px;
+    margin-right: -35px;
+}
+.textCenter {
+    text-align: center;
+}
+#search-bar {
+  background: none;
+  position: absolute;
+  width: 100%;
+  /*top: 44px;*/
+  height: 45px;
+  z-index: 3;
+}
+#search-bar .item {
+  background: none;
+  border: none;
+}
+.platform-android .bar-subheader.has-tabs-top{
+  top:73px ;
+}
+
+.platform-android .has-subheader.has-tabs-top{
+  top:137px;
+}
+#content {
+  top: 93px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#content-chat {
+  top: 33px;
+  padding-top: 2px;
+  padding-bottom: 0px;
+}
+.details {
+    padding: 0px 12px 20px 12px;
+    margin-top:50px !important;
+}
+
+.details img {
+    float: left;
+    margin-right: 12px;
+}
+.push-down {
+      margin-top:50px !important;
+}
+.list {
+    clear: both;
+}
+.textbox-search {
+    line-height:2.0em;
+    /*background-color:#355c7d;*/
+     /*background-color:#eee7bf;*/
+    font-size:20px;
+    /*color:#808080 !important;*/
+    
+}
+i.small-icon.ion-edit {
+  font-size: 90%;
+}
+i.white-icon {
+    color:#ffffff;
+    font-size: 80%;
+}
+i.small-icon {
+  font-size: 90%;
+}
+.white-icon-tab {
+    color:#ffffff;
+    font-size: 100%;
+}
+.img-round {
+    border: 1px solid #c7b89e;
+    width: 200px;
+	height: 200px;
+    margin-left:15%;
+	-webkit-border-radius: 30px; /* Saf3+, Chrome */
+	border-radius: 30px; /* Opera 10.5, IE 9 */
+	/*-moz-border-radius: 30px;  Disabled for FF1+ */
+	}
+ 
+.unwrap-text {
+    white-space:normal !important;
+}
+.bar.bar-stable {
+     color:#fff !important;
+    background-color: #355c7d;
+  
+}
+.bar .title{
+    color:#fff !important;
+}
+.bar.bar-stable .title {
+  color:#fff !important;
+ 
+}
+ 
+/**..........................From John.......................................................*/
+/* Empty. Add your own CSS if you like */
+ /* Empty. Add your own CSS if you like */
+.tabs {
+	/*background-color:#355c7d !important;*/
+    background-color:#3f729b !important;
+	}
+	
+.row-input {
+	 background-color:#355c7d;
+     width: 100%;
+}
+
+.row-login {
+	display: flex;
+padding: 10px;
+background-color: #355C7D;
+width: 100%;
+margin: 0px auto;
+height: 385px;
+}
+
+.button.button-positive {
+	border:0px !important;
+    background-color: #6ad2c6;
+    color: #fff; 
+	font-size: 12px;
+	letter-spacing: 3px;
+	font-weight: 200;
+	border-radius: 0px;
+	border: 0px !important;
+}
+
+.item-login {
+border-bottom: #6AD2C6;
+color: rgba(93, 64, 64, 0) !important;
+position: relative;
+z-index: 2;
+display: block;
+margin: -1px;
+padding: 16px;
+border-width: 1px;
+border-style: solid;
+font-size: 25px !important;
+margin-bottom: 12px;
+	}
+    .item-login input[type="text"], .item-login input[type="password"] {
+        color:#ffffff !important;
+        font-size:18px !important;
+    }
+.item-input {
+display: flex;
+align-items: center;
+position: relative;
+overflow: hidden;
+padding: 6px 0px 5px 16px;
+	}
+    /*.item-input input[type="text"] {
+         font-size:18px !important;
+         font-weight:700 !important;
+    }*/
+.logo {
+	margin:0px auto; 
+   width:300px; 
+     padding-top:80px;
+	}

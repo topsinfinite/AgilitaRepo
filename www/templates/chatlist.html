@@ -1,0 +1,38 @@
+<ion-view view-title="Chat List View" hide-nav-bar="true">
+      <ion-content id="content-chat" >
+         <ion-item ng-hide="chatTrail" class="textCenter">
+                <i class="icon ion-loading-c"></i> Loading Chats
+            </ion-item>
+            <ion-item ng-if="chatTrail.length == 0" class="textCenter">
+                <h4>No messages. Send message to start.</h4>
+            </ion-item>
+        <ion-list ng-hide="chatTrail.length<0">
+            
+             <ion-item class="" ng-repeat="chat in chatTrail | orderBy:'-createdAt':true" type="item-text-wrap" ng-click="openChat1(chat.uid)">
+                  <div class="item-icon-left ">
+                       <i class="icon ion-person small-icon"></i>
+                <h2>{{chat.from}} :</h2>
+                <time am-time-ago="chat.createdAt" class="item-note">
+                   
+                </time>
+                <p style="white-space:normal; font-size:15px !important">{{chat.message}}</p>
+                <ion-option-button class="button-assertive" ng-click="remove(chat)">
+                    Delete
+                </ion-option-button>
+                      </div>
+            </ion-item>
+           <!-- <ion-item   ng-repeat="employee in chatTrail | orderBy:'createdAt':true""   type="item-text-wrap" ng-click="openEmployee(employee.EmployeeID)" >
+                <div class="item-icon-left">
+               <i class="icon ion-person"></i>
+                    <h2>{{employee.FullName}}</h2>
+                    <h5>{{employee.Department}}</h5>
+                 <p class="unwrap-text">{{employee.JobTitle}}</p>
+              </div>
+               <div class="item-icon-right">
+                <i class="icon ion-ios-arrow-right"></i>
+              </div>
+            </ion-item>-->
+           
+        </ion-list>
+   </ion-content>
+</ion-view>
